@@ -1,5 +1,6 @@
 .advantage {
     padding-bottom: 0;
+    margin-top: 94px;
 }
 
 .advantage-list {
@@ -15,9 +16,9 @@
     background-color: $color-button-port;
     display: flex;
     align-items: center;
+    justify-content: center;
     background-position: center center;
     margin-bottom: 30px;
-    padding-left: 102px;
 }
 
 .advantage-box__icon {
@@ -39,4 +40,5 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
     text-align: left;
+    margin-bottom: 0;
 }

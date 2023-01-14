@@ -74,7 +74,7 @@ img {
   display: flex;
 }
 
-.navigation__site {
+.navigation-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,7 +107,7 @@ img {
   color: #000000;
 }
 
-.site__link {
+.navigation-list__item {
   color: #212121;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -118,11 +118,11 @@ img {
   margin-right: 50px;
 }
 
-.site__link:last-child {
+.navigation-list__item:last-child {
   margin-right: 0;
 }
 
-.link {
+.navigation-list__link {
   position: relative;
   color: #212121;
   font-weight: 500;
@@ -139,7 +139,7 @@ img {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.link:hover, .link:focus {
+.navigation-list__link:hover, .navigation-list__link:focus {
   color: #2196F3;
 }
 
@@ -161,7 +161,7 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link::after {
+.navigation-list__link::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -173,33 +173,39 @@ img {
   opacity: 0;
 }
 
-.link.current::after {
+.navigation-list__link.current::after {
   opacity: 1;
   color: #2196F3;
 }
 
 /* контакты */
-.contacts__list {
+.contacts-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.list-link__contacts {
+.contacts-list__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-right: 50px;
 }
-
-.contacts__link {
-  color: #757575;
+.contacts-list__item:last-child {
+  margin-right: 0;
+}
+.contacts-list__item:hover, .contacts-list__item:focus {
+  color: #2196F3;
+  fill: #2196F3;
   cursor: pointer;
+}
+
+.contacts-list__link {
+  color: #757575;
   font-size: 14px;
   line-height: 1.14;
   font-weight: 700;
   letter-spacing: 0.02em;
-  /*  */
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -211,34 +217,16 @@ img {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* наведение */
-.list-link__contacts:hover,
-.list-link__contacts:focus,
-.contacts__link:hover,
-.contacts__link:focus,
-.phone:hover,
-.phone:focus,
-.letter:hover,
-.letter:focus {
+.contacts-list__link:hover, .contacts-list__link:focus {
   color: #2196F3;
-  fill: #2196F3;
   cursor: pointer;
 }
 
 .phone,
 .letter {
   margin-right: 10px;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250mscubic-bezier 0.4, 0, 0.2, 1;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250mscubic-bezier 0.4, 0, 0.2, 1;
-}
-
-.list-link__contacts:last-child {
-  margin-right: 0;
-}
-
-.icon {
-  margin-right: 10px;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero {
@@ -544,6 +532,7 @@ textarea[placeholder] {
 
 .advantage {
   padding-bottom: 0;
+  margin-top: 94px;
 }
 
 .advantage-list {
@@ -567,9 +556,11 @@ textarea[placeholder] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-position: center center;
   margin-bottom: 30px;
-  padding-left: 102px;
 }
 
 .advantage-box__icon {
@@ -593,6 +584,7 @@ textarea[placeholder] {
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-align: left;
+  margin-bottom: 0;
 }
 
 .activities {
@@ -646,9 +638,11 @@ textarea[placeholder] {
 
 .team-util {
   background-color: #F5F4FA;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
-.team-title {
+.team__title {
   color: #212121;
   font-size: 36px;
   line-height: 1.16;
@@ -657,7 +651,7 @@ textarea[placeholder] {
   margin-bottom: 50px;
 }
 
-.team-list {
+.team__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1057,9 +1051,7 @@ footer {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.portfolio-button:hover,
-.portfolio-button:focus {
+.portfolio-button:hover, .portfolio-button:focus {
   background-color: #2196F3;
   color: #F5F4FA;
   cursor: pointer;
@@ -1067,7 +1059,6 @@ footer {
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* сайты */
 /* сайты */
 .card-list {
   display: -webkit-box;
@@ -1191,8 +1182,7 @@ footer {
 .section {
   padding-left: 0;
   padding-right: 0;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  margin-bottom: 94px;
 }
 
 .container {

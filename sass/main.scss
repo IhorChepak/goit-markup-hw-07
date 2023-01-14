@@ -1,5 +1,6 @@
 @import "./utils/colors";
 @import "./utils/reset";
+@import "./utils/breakpoints";
 @import "./components/page-header";
 @import "./components/section-hero";
 @import"./components/section-advantages";
@@ -19,8 +20,7 @@
 .section {
     padding-left: 0;
     padding-right: 0;
-    padding-top: 94px;
-    padding-bottom: 94px;
+    margin-bottom: 94px;
 }
 
 .container {
